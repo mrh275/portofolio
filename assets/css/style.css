@@ -6,18 +6,18 @@
   --header-height: 3rem;
 
   /* Colors */
-  --hue-color: 204;
+  --hue-color: 250;
 
   /* HSL Color Mode */
-  --first-color: hsl(var(--hue-color), 100%, 50%);
-  --first-color-second: hsl(var(--hue-color), 100%, 50%);
-  --first-color-alt: hsl(var(--hue-color), 88%, 42%);
-  --first-color-lighter: hsl(var(--hue-color), 100%, 74%);
-  --title-color: hsl(var(--hue-color), 39%, 4%);
-  --text-color: hsl(var(--hue-color), 39%, 34%);
-  --text-color-light: hsl(var(--hue-color), 39%, 54%);
-  --input-color: hsl(var(--hue-color), 100%, 85%);
-  --body-color: hsl(var(--hue-color), 91%, 88%);
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #fff;
 
   /* Font and typography */
@@ -135,4 +135,60 @@ img {
 .grid {
   display: grid;
   gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+/* Navbar */
+.nav {
+  max-width: 968px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav__logo:hover {
+  color: var(--first-color);
+}
+
+.nav__toggle {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.nav__toggle:hover {
+  color: var(--first-color);
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.3s;
+  }
+}
+
+.nav__list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
