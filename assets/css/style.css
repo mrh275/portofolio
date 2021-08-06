@@ -224,3 +224,6 @@ img {
 }
 
 /* Show Menu on Mobile Devices */
+.show-menu {
+  bottom: 0;
+}
