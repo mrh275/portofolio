@@ -154,3 +154,12 @@ function scrollHeader() {
 }
 
 window.addEventListener('scroll', scrollHeader);
+
+/* Show scroll up button on scroll */
+function scrollUp() {
+  const scrollUp = document.getElementById('scroll-up');
+  // Whem the scroll is higher than 560 vh, add the show-scroll class to the tag with scroll
+  if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll');
+}
+
+window.addEventListener('scroll', scrollUp);
