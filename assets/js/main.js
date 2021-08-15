@@ -193,3 +193,10 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-theme', getCurrentTheme());
   localStorage.setItem('selected-theme', getCurrentIcon());
 });
+
+
+// Get year
+let date = new Date();
+let y = date.getFullYear();
+
+document.querySelector('span.year').innerHTML = y;
